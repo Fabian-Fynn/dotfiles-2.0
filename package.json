@@ -1,0 +1,31 @@
+{
+  "name": "dotfiles-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabian-Fynn/dotfiles-2.0.git"
+  },
+  "author": "Fabian Hoffmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabian-Fynn/dotfiles-2.0/issues"
+  },
+  "homepage": "https://github.com/Fabian-Fynn/dotfiles-2.0#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.1.11",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "user-home": "^2.0.0"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
+}
