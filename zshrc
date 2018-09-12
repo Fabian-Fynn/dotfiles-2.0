@@ -1,8 +1,8 @@
 #if [ "$TMUX" = "" ]; then tmux new /bin/zsh; fi
-export ZSH=/Users/Fabi/.oh-my-zsh
+export ZSH=/Users/fabian/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="wedisagree"
 
 # Terminal Themes
 # https://github.com/lysyi3m/osx-terminal-themes
