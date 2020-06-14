@@ -171,6 +171,8 @@ export PATH=$PATH:/usr/local/sbin;
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
+export GOOGLE_APPLICATION_CREDENTIALS="/users/Fabi/node-pi-firebase-adminsdk.json"
 
 
 #  ███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
