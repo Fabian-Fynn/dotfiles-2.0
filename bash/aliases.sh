@@ -7,7 +7,7 @@
 #   ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
 # Management
-alias dots='cd ~/dotfiles-2.0 && vim'
+alias dots='cd ~/dotfiles-2.0'
 alias ra='cd ~/dotfiles-2.0 && gulp && source ~/.zshrc && cd - && echo "reloaded dotfiles"'
 alias addalias='vim ~/dotfiles-2.0/aliases/aliases.sh'
 alias usebash='chsh -s /bin/bash'
@@ -50,8 +50,8 @@ alias gw='git show'
 alias gd='git diff HEAD'
 alias ga='git add'
 alias gaa='git add --all'
-alias gc='git commit --no-verify'
-alias gcm='git commit --no-verify -m'
+alias gc='git commit'
+alias gcm='git commit -m'
 alias gpp='git pull --rebase && git push'
 alias gpl='git pull'
 alias gps='git push origin'
@@ -94,7 +94,12 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 FIREBASE_TOKEN='1/NQ34S2EQf7UOkcclFa51Onzvbf8FG5R68TubODYFExY'
+export GITLAB_NPM_TOKEN=R6fvXYQ444mP2Uf1XzR-
 
 alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
 alias rni='react-native run-ios'
 alias rna='react-native run-android'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
