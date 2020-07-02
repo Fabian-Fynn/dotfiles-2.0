@@ -1,8 +1,8 @@
 #if [ "$TMUX" = "" ]; then tmux new /bin/zsh; fi
-export ZSH=/Users/Fabi/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="wedisagree"
 
 # Terminal Themes
 # https://github.com/lysyi3m/osx-terminal-themes
@@ -91,8 +91,8 @@ source $ZSH/oh-my-zsh.sh
 #   ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
 # Management
-alias dots='cd ~/dotfiles-2.0 && vim'
-alias ra='cd ~/dotfiles-2.0 && gulp && source ~/.zshrc && echo "reloaded dotfiles"'
+alias dots='cd ~/dotfiles-2.0'
+alias ra='cd ~/dotfiles-2.0 && gulp && source ~/.zshrc && cd - && echo "reloaded dotfiles"'
 alias addalias='vim ~/dotfiles-2.0/aliases/aliases.sh'
 alias usebash='chsh -s /bin/bash'
 alias usezsh='chsh -s /bin/zsh'
@@ -108,12 +108,16 @@ alias cd..='cd ..'
 alias mkdir='mkdir -pv' #create parents if needed
 alias mv='mv -i' #move ask if overwrite
 alias tm='tmux new /bin/zsh'
+alias app='cd ~/code/workplace-app'
+alias be='cd ~/code/workplace-backend'
+alias brapp='cd ~/code/blackroll-app'
+alias brbe='cd ~/code/blackroll-backend'
+
 
 # Project navigation
 alias fh='cd ~/Google\ Drive/fh/'
 alias godev='cd ~/Sites'
 alias fodbox='ssh fhoffmann@193.170.119.140 -p 5412'
-alias menow='cd ~/Sites/menow/menow-api/'
 
 # Network
 alias ip="ifconfig|grep broadcast"  # List IPs
@@ -123,16 +127,18 @@ alias fw='~/Sites/inet_studentenheim-master/connect.sh'
 # Git
 alias g='git'
 alias gs='git status'
+alias gsh='git stash'
+alias gsp='git stash pop'
 alias gl='git log'
 alias gw='git show'
 alias gd='git diff HEAD'
 alias ga='git add'
 alias gaa='git add --all'
-alias gc='git commit --no-verify'
-alias gcm='git commit --no-verify -m'
+alias gc='git commit'
+alias gcm='git commit -m'
 alias gpp='git pull --rebase && git push'
 alias gpl='git pull'
-alias gps='git push'
+alias gps='git push origin'
 alias go='git checkout'
 alias gb='git checkout -b'
 alias got='git checkout -'
@@ -140,7 +146,7 @@ alias gom='git checkout master'
 alias gbr='git branch -d'
 alias gcount='eval "git rev-list HEAD --count"'
 alias gra='git remote add'
-alias gbdall='git branch | grep -v "master" | xargs git branch -D'
+alias gbdall='git branch | grep -v "master" | grep -v "development" | xargs git branch -D'
 
 # Tools
 #alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
@@ -171,8 +177,20 @@ export PATH=$PATH:/usr/local/sbin;
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+FIREBASE_TOKEN='1/NQ34S2EQf7UOkcclFa51Onzvbf8FG5R68TubODYFExY'
+export GITLAB_NPM_TOKEN=R6fvXYQ444mP2Uf1XzR-
+
+alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
+alias rni='react-native run-ios'
+alias rna='react-native run-android'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
 # export GOOGLE_APPLICATION_CREDENTIALS="/Users/fabian/windhund-office-dev-firebase-adminsdk.json"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/node-pi-firebase-adminsdk.json"
 
 
 #  ███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗

@@ -1,5 +1,5 @@
 #if [ "$TMUX" = "" ]; then tmux new /bin/zsh; fi
-export ZSH=/Users/fabian/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="wedisagree"
