@@ -26,14 +26,15 @@ alias mv='mv -i' #move ask if overwrite
 alias tm='tmux new /bin/zsh'
 alias app='cd ~/code/workplace-app'
 alias be='cd ~/code/workplace-backend'
-alias brapp='cd ~/code/blackroll-app'
-alias brbe='cd ~/code/blackroll-backend'
-
-
-# Project navigation
-alias fh='cd ~/Google\ Drive/fh/'
-alias godev='cd ~/Sites'
-alias fodbox='ssh fhoffmann@193.170.119.140 -p 5412'
+alias bgm='cd ~/code/bgm'
+alias dropdb='cd ~/code/bgm && dotenv -- npm --prefix api run typeorm:run && dotenv -- npm --prefix api run typeorm:run'
+alias sync='cd ~/code/bgm && dotenv -- npm --prefix api run sync:exercises'
+alias fix='cd ~/code/bgm && dotenv -- npm --prefix api run fixtures 10'
+alias api='cd ~/code/bgm && npm run dev:api'
+alias admin='cd ~/code/bgm && npm run dev:admin'
+alias login='cd ~/code/bgm && npm run dev:login'
+alias frontend='cd ~/code/bgm && npm run dev:frontend'
+alias proxy='cd ~/code/bgm && npm run proxy'
 
 # Network
 alias ip="ifconfig|grep broadcast"  # List IPs
@@ -87,22 +88,6 @@ alias ngxLog='sudo cat /var/log/nginx/error.log'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-export PATH=$PATH:/usr/local/sbin;
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-FIREBASE_TOKEN='1/NQ34S2EQf7UOkcclFa51Onzvbf8FG5R68TubODYFExY'
-export GITLAB_NPM_TOKEN=R6fvXYQ444mP2Uf1XzR-
-
 alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
 alias rni='react-native run-ios'
 alias rna='react-native run-android'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
-export GOOGLE_APPLICATION_CREDENTIALS="/users/Fabi/node-pi-firebase-adminsdk.json"
