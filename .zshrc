@@ -181,6 +181,7 @@ FIREBASE_TOKEN='1/NQ34S2EQf7UOkcclFa51Onzvbf8FG5R68TubODYFExY'
 export GITLAB_NPM_TOKEN=R6fvXYQ444mP2Uf1XzR-
 
 alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
+alias startAndroidEmulatorLatest=' ${ANDROID_HOME}/emulator/emulator -avd Pixel_2_API_30'
 alias rni='react-native run-ios'
 alias rna='react-native run-android'
 

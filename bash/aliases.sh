@@ -89,6 +89,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
+alias startAndroidEmulatorLatest=' ${ANDROID_HOME}/emulator/emulator -avd Pixel_2_API_30'
 alias rni='react-native run-ios'
 alias rna='react-native run-android'
 
