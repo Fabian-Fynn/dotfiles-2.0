@@ -1,6 +1,8 @@
 #if [ "$TMUX" = "" ]; then tmux new /bin/zsh; fi
 export ZSH=$HOME/.oh-my-zsh
 
+# export ZSH=/Users/fabian/.oh-my-zsh
+#export ZSH_DISABLE_COMPFIX=true
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="wedisagree"
 
@@ -51,7 +53,7 @@ ZSH_THEME="wedisagree"
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+ source $ZSH/oh-my-zsh.sh
 
 export VIVID_HOST_USERNAME=fabian
 export VIVID_REMOTE_HOST=fabian.vivid
@@ -86,3 +88,10 @@ export VIVID_REMOTE_ROOT=/var/www
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+ if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+#    compinit
+  fi
