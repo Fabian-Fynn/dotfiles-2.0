@@ -23,7 +23,7 @@ mcd () {
 
 
 droplet () {
-    addr='188.166.32.149'
+    addr='139.59.144.84'
 
     eval "ssh fabi@$addr"
 }

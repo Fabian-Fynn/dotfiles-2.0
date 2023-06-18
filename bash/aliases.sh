@@ -24,17 +24,6 @@ alias cd..='cd ..'
 alias mkdir='mkdir -pv' #create parents if needed
 alias mv='mv -i' #move ask if overwrite
 alias tm='tmux new /bin/zsh'
-alias app='cd ~/code/workplace-app'
-alias be='cd ~/code/workplace-backend'
-alias bgm='cd ~/code/bgm'
-alias dropdb='cd ~/code/bgm && dotenv -- npm --prefix api run typeorm:run && dotenv -- npm --prefix api run typeorm:run'
-alias sync='cd ~/code/bgm && dotenv -- npm --prefix api run sync:exercises'
-alias fix='cd ~/code/bgm && dotenv -- npm --prefix api run fixtures 10'
-alias api='cd ~/code/bgm && npm run dev:api'
-alias admin='cd ~/code/bgm && npm run dev:admin'
-alias login='cd ~/code/bgm && npm run dev:login'
-alias frontend='cd ~/code/bgm && npm run dev:frontend'
-alias proxy='cd ~/code/bgm && npm run proxy'
 
 # Network
 alias ip="ifconfig|grep broadcast"  # List IPs
@@ -68,7 +57,7 @@ alias gbdall='git branch | grep -v "master" | grep -v "development" | xargs git 
 # Tools
 #alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
 alias pgstart='sudo postgres -D /usr/local/var/postgres'
-alias mongo='mongod --config /usr/local/etc/mongod.conf'
+alias mongodconf='mongod --config /usr/local/etc/mongod.conf'
 
 # Tmux
 alias tls='tmux ls'
@@ -87,11 +76,6 @@ alias ngxLog='sudo cat /var/log/nginx/error.log'
 # Others
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-alias startAndroidEmulator=' ${ANDROID_HOME}/emulator/emulator -avd Nexus_5X_API_29'
-alias startAndroidEmulatorLatest=' ${ANDROID_HOME}/emulator/emulator -avd Pixel_2_API_30'
-alias rni='react-native run-ios'
-alias rna='react-native run-android'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
