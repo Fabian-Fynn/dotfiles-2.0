@@ -56,7 +56,7 @@ alias gbdall='git branch | grep -v "master" | grep -v "development" | xargs git 
 # Tools
 #alias mysql='sudo /usr/local/mysql/support-files/mysql.server'
 alias pgstart='sudo postgres -D /usr/local/var/postgres'
-alias mongo='mongod --config /usr/local/etc/mongod.conf'
+alias mongodconf='mongod --config /usr/local/etc/mongod.conf'
 
 # Tmux
 alias tls='tmux ls'
@@ -116,3 +116,9 @@ alias displaysHome='displayplacer "id:738DF461-1DF1-6E22-1FD6-1B5C902D75CF res:2
 alias displaysOffice='displayplacer "id:C688976E-B705-F98A-F9BE-C1ACEB43BF6A res:3840x2160 hz:60 color_depth:4 scaling:on origin:(0,0) degree:0" "id:5581C0B9-B838-06FD-0260-69C9BDB744A7 res:2304x1440 hz:59 color_depth:4 scaling:off origin:(3840,720) degree:0" "id:FB120CA9-2AC0-D564-E14A-F1564F8E6E49 res:3840x2160 hz:60 color_depth:4 scaling:off origin:(-3840,0) degree:0"'
 
 alias syncsharedwww='php ~/www/library/kwfscripts/vivid/sync-shared.php'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/node-pi-firebase-adminsdk.json"
