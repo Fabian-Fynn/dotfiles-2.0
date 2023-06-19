@@ -1,5 +1,5 @@
 #if [ "$TMUX" = "" ]; then tmux new /bin/zsh; fi
-export ZSH=/Users/fabian/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="wedisagree"
@@ -52,6 +52,11 @@ ZSH_THEME="wedisagree"
 #plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+export VIVID_HOST_USERNAME=fabian
+export VIVID_REMOTE_HOST=fabian.vivid
+export VIVID_LOCAL_ROOT=~/www
+export VIVID_REMOTE_ROOT=/var/www
 
 # User configuration
 

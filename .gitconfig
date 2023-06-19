@@ -1,6 +1,6 @@
 [user]
 	name = Fabian-Fynn
-	email = fhoffmann.mmt-m2016@fh-salzburg.ac.at
+	email = me@fabianhoffmann.io
 [core]
 	excludesfile = ~/.gitignore
 	ignorecase = false

@@ -9,12 +9,20 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 FIREBASE_TOKEN='1/NQ34S2EQf7UOkcclFa51Onzvbf8FG5R68TubODYFExY'
-export GITLAB_NPM_TOKEN=R6fvXYQ444mP2Uf1XzR-
+export GITLAB_NPM_TOKEN=Sxbd_YQvSTVJBzPnSsoB
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
-# export GOOGLE_APPLICATION_CREDENTIALS="/Users/fabian/windhund-office-dev-firebase-adminsdk.json"
-export VIVID_HOST_USERNAME=home
+
+
+# Vivid
+export VIVID_HOST_USERNAME=fabian
+export VIVID_REMOTE_HOST=shared.vivid
+export VIVID_LOCAL_ROOT=~/www
+export VIVID_REMOTE_ROOT=/var/www
+
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
