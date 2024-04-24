@@ -36,3 +36,21 @@ code () {
 ##  VIVID  ##
 #############
 
+tp () {
+  res=$(/usr/local/bin/blueutil --is-connected e8:80:2e:e6:e0:69)
+  if [[ "$res" = '1' ]]
+  then
+  echo "Trackpad is connected. Disconnecting"
+  /usr/local/bin/blueutil --unpair e8:80:2e:e6:e0:69
+  echo "disconnected"
+  else
+  echo "Trackpad is not connected. Connecting"
+  /usr/local/bin/blueutil --unpair e8:80:2e:e6:e0:69
+  sleep 1
+  echo "pairing"
+  /usr/local/bin/blueutil --pair e8:80:2e:e6:e0:69 "" &>/dev/null
+  sleep 1
+  /usr/local/bin/blueutil --connect e8:80:2e:e6:e0:69
+  echo "connected"
+  fi
+}
